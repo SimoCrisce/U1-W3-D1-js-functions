@@ -35,20 +35,36 @@ console.log(random);
 function even() {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const evenNumbers = numbers.filter((number) => number % 2 === 0);
-  console.log(evenNumbers);
+  return evenNumbers;
 }
+const evenNums = even();
+console.log(evenNums);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
-// function sum(accumulator, totalValue) {
-//   const numbers = [5, 20, 34, 72, 80, 97];
-//   numbers.forEach(())
+function arrSum() {
+  const numbers = [5, 20, 34, 72, 80, 97];
+  let sum = 0;
+  const totalSum = numbers.forEach((number) => (sum += number));
+  return totalSum;
+}
+const arSum = arrSum();
+console.log(arSum);
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+function arrSum() {
+  const numbers = [5, 20, 34, 72, 80, 97];
+  let sum = 0;
+  const numSum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+  return numSum;
+}
+const arraySum = arrSum();
+console.log(arraySum);
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -59,10 +75,28 @@ function even() {
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+function stringArr() {
+  const strings = ["EPICODE", "is", "great"];
+  const stringLetters = strings.map((string) => string.length);
+  return stringLetters;
+}
+const stringLetNums = stringArr();
+console.log(stringLetNums);
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
+// function arrNums() {
+//   const array = [];
+//   for (let i = 1; i < 100; i += 2) {
+//     const oddNums = array.push(i);
+//     return oddNums;
+//   }
+// }
+// console.log(oddNums);
+
+// console.log(array);
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
